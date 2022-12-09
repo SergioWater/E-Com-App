@@ -9,14 +9,23 @@ function App() {
     <div>
       
       <Title/>
-      <div className='todo__wrapper'>
-      <Todo/>
-      <Todo/>
-      <Todo/>
+      <div>
+        <input type="text" onChange={(event) => {
+          console.log(event.target.value)
+        }}/>
+        <button>Add todo </button>
       </div>
-      <Modal/>
+
+      <div className='todo__wrapper'>
+      <Todo title="Finished frontend Simplfied"/>
+      <Todo title="Finished interview Section"/>
+      <Todo title="Land 100k job"/>
+      </div>
+      <Modal title="Do you want to?"/>
+      
     </div>
   );
 }
 
 export default App;
+
