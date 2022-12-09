@@ -1,10 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Todo from './components/Todo'
+import Title from './components/Title'
 
 function App() {
   return (
-    <div className="App">
-
+    <div>
+      
+      <Title/>
+      <div className='todo__wrapper'>
+      <Todo/>
+      <Todo/>
+      <Todo/>
+      </div>
     </div>
   );
 }
