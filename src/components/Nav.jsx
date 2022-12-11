@@ -3,8 +3,8 @@ function Nav(){
     return (  
         <nav>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/users/jose">Jose</Link>
+        <Link to="/users/jesus">Jesus</Link>
         </nav>
         )
 
