@@ -3,14 +3,27 @@ import './App.css';
 import Todo from './components/Todo'
 import Title from './components/Title'
 import Modal from './components/Modal'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Counter from './components/Counter'
 
 function App() {
 
-
-  return <Counter/>
   const [showModal, setShowModal] = useState(false)
+
+    function onTodoDelete(){
+      setShowModal(true)
+      console.log('onTodoDelete()')
+    }
+    function cancelModal(){
+      setShowModal(false)
+    }
+    function confirmModal(){
+      setShowModal(false)
+
+    }
+
+    useEffect(() => {console.log('on mount')}, [])
+
 
   return (
     <div>
@@ -24,12 +37,12 @@ function App() {
       </div>
 
       <div className='todo__wrapper'>
-      <Todo title="Finished frontend Simplfied"/>
-      <Todo title="Finished interview Section"/>
-      <Todo title="Land 100k job"/>
+      <Todo onTodoDelete={onTodoDelete} title="Finished frontend Simplfied"/>
+      <Todo onTodoDelete={onTodoDelete} title="Finished interview Section"/>
+      <Todo onTodoDelete={onTodoDelete} title="Land 100k job"/>
       </div>
 
-      {showModal && <Modal title="Do you want to?"/>}
+      {showModal && <Modal asd123={cancelModal} confirmModal={confirmModal} title="Do you want to?"/>}
       
     </div>
   );
