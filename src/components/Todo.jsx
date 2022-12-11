@@ -3,7 +3,6 @@ import './Todo.css'
 
 function Todo({title, onTodoDelete}){
 
-  console.log(title)
     return(
         <div className='todo'>
         <p>{title}</p>
